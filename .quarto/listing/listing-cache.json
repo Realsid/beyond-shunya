@@ -1,28 +1,13 @@
 {
   "listingMap": {
-    "blog.qmd": [
-      "posts"
-    ],
-    "weblog.qmd": [
-      "posts"
-    ],
-    "books.qmd": [
-      "posts",
-      "books"
+    "essays.qmd": [
+      "essays"
     ],
     "index.qmd": [
-      "B3049D40",
-      "books/*",
-      "posts/*",
-      "books",
-      "posts",
-      "bookshelf"
+      "essays"
     ],
     "bookshelf.qmd": [
       "bookshelf"
-    ],
-    "essays.qmd": [
-      "essays"
     ]
   }
 }

@@ -1,96 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Beyond Shunya",
-    "section": "",
-    "text": "Hi, I’m Sidharth.\nIn past life I have worked as a machine learning engineer in various startups.\nI’m currently focused on increasing net value that I can bring to the world.\nYou can also find me on X."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Journal your curiosity.\n\n\n\n\n\n\nnotes\n\n\n\n\n\n\n\n\n\nJun 1, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2024-06-01-llm-building.html",
-    "href": "posts/2024-06-01-llm-building.html",
-    "title": "What We’ve Learned From A Year of Building with LLMs",
-    "section": "",
-    "text": "This is where you’d write your blog post content about lessons learned from building with LLMs over the past year."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Do you need help operationalizing ML or large language models? I’m open to new consulting work and other forms of advisory. If you need help with your project, send me a brief email at contact@example.com."
-  },
-  {
-    "objectID": "about.html#get-in-touch",
-    "href": "about.html#get-in-touch",
-    "title": "About",
-    "section": "",
-    "text": "Do you need help operationalizing ML or large language models? I’m open to new consulting work and other forms of advisory. If you need help with your project, send me a brief email at contact@example.com."
-  },
-  {
-    "objectID": "internal/TODO.html",
-    "href": "internal/TODO.html",
-    "title": "TODO",
-    "section": "",
-    "text": "TODO\n\nDecide sections beyond blog\nGoogle analytics\nObsidian notes import\nCheckout interactivity guide for quarto\nCheckout Hamel’s blog on syntax hilighting"
-  },
-  {
-    "objectID": "weblog.html",
-    "href": "weblog.html",
-    "title": "",
-    "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 1, 2024\n\n\nJournal your curiosity.\n\n\n \n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "books.html",
-    "href": "books.html",
-    "title": "",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "index.html#connect-with-me",
-    "href": "index.html#connect-with-me",
-    "title": "",
-    "section": "🌐 Connect with me",
-    "text": "🌐 Connect with me\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#also-find-me-here",
-    "href": "index.html#also-find-me-here",
-    "title": "",
-    "section": "🌐 Also find me here",
-    "text": "🌐 Also find me here\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#feed",
-    "href": "index.html#feed",
-    "title": "",
-    "section": "📝 Feed",
-    "text": "📝 Feed\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n2024-10-27\n\n\nMastery by Robert Greene\n\n\ncurrently-reading\n\n\n\n\n2024-06-01\n\n\nJournal your curiosity.\n\n\nnotes\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#elsewhere",
-    "href": "index.html#elsewhere",
-    "title": "",
-    "section": "Elsewhere",
-    "text": "Elsewhere"
-  },
-  {
-    "objectID": "index.html#recent-activity",
-    "href": "index.html#recent-activity",
-    "title": "Beyond Shunya",
-    "section": "🆕 Recent activity",
-    "text": "🆕 Recent activity\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "bookshelf.html",
     "href": "bookshelf.html",
     "title": "Beyond Shunya",
@@ -103,5 +12,19 @@
     "title": "Beyond Shunya",
     "section": "",
     "text": "No matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Beyond Shunya",
+    "section": "",
+    "text": "Hi, I’m Sidharth.\nIn past life I have worked as a machine learning engineer in various startups.\nI’m currently focused on increasing net value that I can bring to the world.\nYou can also find me on X."
+  },
+  {
+    "objectID": "index.html#recent-activity",
+    "href": "index.html#recent-activity",
+    "title": "Beyond Shunya",
+    "section": "🆕 Recent activity",
+    "text": "🆕 Recent activity\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
