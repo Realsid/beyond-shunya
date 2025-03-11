@@ -1,0 +1,30 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/journal-your-curiosity.html"
+    ]
+  },
+  {
+    "listing": "/weblog.html",
+    "items": [
+      "/posts/journal-your-curiosity.html"
+    ]
+  },
+  {
+    "listing": "/books.html",
+    "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
+    "listing": "/bookshelf.html",
+    "items": []
+  },
+  {
+    "listing": "/essays.html",
+    "items": []
+  }
+]

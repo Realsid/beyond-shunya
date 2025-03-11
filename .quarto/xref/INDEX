@@ -1,0 +1,50 @@
+{
+  "index.qmd": {
+    "index.html": "db7947d6"
+  },
+  "posts/2024-06-01-llm-building.qmd": {
+    "2024-06-01-llm-building.html": "6b033713"
+  },
+  "about.qmd": {
+    "about.html": "828b6e0e"
+  },
+  "blog.qmd": {
+    "blog.html": "fca409a5"
+  },
+  "posts/journal-your-curiosity.qmd": {
+    "journal-your-curiosity.html": "ba0dde77"
+  },
+  "internal/TODO.md": {
+    "TODO.html": "4069c75c"
+  },
+  "books.qmd": {
+    "books.html": "c8f5cf50"
+  },
+  "TODO.md": {
+    "TODO.html": "eebd7de1"
+  },
+  "weblog.qmd": {
+    "weblog.html": "7fe2b107"
+  },
+  "books/mastery-by-robert-green.qmd": {
+    "mastery-by-robert-green.html": "64387038"
+  },
+  "bookshelf/mastery-by-robert-green.qmd": {
+    "mastery-by-robert-green.html": "25a7f835"
+  },
+  "bookshelf.qmd": {
+    "bookshelf.html": "68c94710"
+  },
+  "posts/interview-readiness.qmd": {
+    "interview-readiness.html": "7f434588"
+  },
+  "essays/interview-readiness.qmd": {
+    "interview-readiness.html": "0bea7e44"
+  },
+  "essays/journal-your-curiosity.qmd": {
+    "journal-your-curiosity.html": "2d70b9c0"
+  },
+  "essays.qmd": {
+    "essays.html": "8c808014"
+  }
+}

@@ -1,0 +1,25 @@
+---
+title: "Interview Readiness[Working title]"
+date: "2024-06-01"
+categories: [career]
+draft: true
+---
+# Don't restart at 0
+- Why is preparedness necessary ?
+    - Capricious nature of job
+    - Only prepared people get lucky
+    - Psychological independence
+# Framework
+## Active online presence
+## DSA
+    - Practice common algorithms and problem patterns, find where you get stuck
+      and practice them more.
+    - Aim to reach a level that all the basic patterns are never revisited
+    - Minimise the grind by grokking fundamental principles
+    - Leetcode patterns
+## System design
+    - Behavioral
+## Identify weakness
+    - Practice common algorithms and problem patterns, find where you get stuck
+      and practice them more. 
+    

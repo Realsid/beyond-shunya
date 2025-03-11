@@ -1,0 +1,11 @@
+---
+listing:
+  contents: bookshelf
+  sort: "date desc"
+  type: table
+  sort-ui: false
+  filter-ui: false
+  template: templates/bookshelf.ejs
+page-layout: full
+title-block-banner: true
+---

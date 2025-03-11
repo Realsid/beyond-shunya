@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Beyond Shunya"
+  navbar:
+    pinned: true
+    search: true
+    left:
+      - text: "home"
+        href: index.qmd
+      - text: "essays"
+        href: essays.qmd
+      - text: "bookshelf"
+        href: bookshelf.qmd
+  page-footer: 
+    right: 
+      - icon: github
+        href: https://github.com/Realsid
+      - icon: twitter 
+        href: https://x.com/sid_on_x
+      - icon: linkdin
+        href: https://www.linkedin.com/in/sid-on-in
+
+format:
+  html:
+    theme: 
+      dark: darkly
+      light: flalty
+    css: styles.css
+    toc: true

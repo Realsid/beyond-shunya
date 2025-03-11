@@ -1,0 +1,32 @@
+---
+sidebar: false
+description: "Musings on this life. Contains essays, technical writings and a collection of books I've read."
+image: quarto.png
+toc: true
+listing:
+  date-format: iso
+  filter-ui: true
+  type: table
+  sort-ui: false
+  sort: "date desc"
+  categories: true
+  fields: [date, title, categories]
+  id: recent-activity
+  contents: [posts]
+format:
+  html:
+    anchor-sections: true
+---
+::: {.profile-header}
+
+Hi, I'm Sidharth. 
+
+In past life I have worked as a machine learning engineer in various startups.  
+
+I'm currently focused on increasing net value that I can bring to the world. 
+
+You can also find me on [X](https://x.com/sid_on_x). 
+:::
+## 🆕 Recent activity
+::: {#recent-activity}
+:::
