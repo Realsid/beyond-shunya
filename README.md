@@ -5,8 +5,8 @@ Personal website of Sidharth Singh powered by [Quarto](https://quarto.org/)
 - [X] Publish blog
 - [X] Use github workflow for deploying on push to master
 - [X] Add socials
-- [ ] Add bookshelf
-- [ ] Add first post
+- [X] Add bookshelf
+- [X] Add first post
 - [ ] Add applause button
 - [ ] ? Add about page
 - [ ] Customise using brand.yml

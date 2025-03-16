@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "bookshelf.html",
-    "href": "bookshelf.html",
+    "objectID": "blog.html",
+    "href": "blog.html",
     "title": "Beyond Shunya",
     "section": "",
-    "text": "Following are some books I’ve read, currently unordered.\n\n\n\nThe Dispossessed by Ursula K. Le Guin\n\nsci-fi\n\n\n\nDeep Work by Cal Newport\n\nself-help\n\n\n\nVagabond by Takehiko Inoue\n\nmanga\n\n\n\nMasters of Doom by David Kushner\n\nnon-fiction\n\n\n\nThe Courage to Be Disliked by Ichiro Kishimi and Fumitake Koga\n\nself-help\n\n\n\nDark Matter by Blake Crouch\n\nsci-fi\n\n\n\nThe Prophet by Kahlil Gibran\n\nphilosophy\n\n\n\nWhen Breath Becomes Air by Paul Kalanithi\n\nnon-fiction\n\n\n\nTao Te Ching by Lao Tzu (translated by Ursula K. Le Guin)\n\nphilosophy\n\n\n\nDune by Frank Herbert\n\nsci-fi\n\n\n\nVivekananda Reader by Swami Vivekananda\n\nphilosophy\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMar 16, 2025\n\n\nJournal your curiosity\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "essays.html",
-    "href": "essays.html",
-    "title": "Beyond Shunya",
+    "objectID": "blog/journal-your-curiosity.html",
+    "href": "blog/journal-your-curiosity.html",
+    "title": "Journal your curiosity",
     "section": "",
-    "text": "No matching items"
+    "text": "For people who are familiar with the Turing test, they have known for a while that the current AI systems have far surpassed it. While getting more intelligent systems unlocks a lot of value, overreliance on such tools will have counter effects.\nCurrent models have the compressed knowledge of the entire internet and they are able to use that knowledge to produce coherent body of text. This is going to take the novelty away from people who could write well. You can throw a half baked thought into this black box and it will turn it into the most eloquent writing you have seen. Clear, concise and to the point.\nAI systems give you super power of writing clearly without really putting in the effort. Writing requires thinking systematically. It requires a lot of effort to come up with good writing. With AI systems people will invariably take path of least resistance and delegate the critical step between ideation and writing to the AI. It will to distinct classes of people that Paul Graham describes as writes and write-nots.\nSince writing is an extension of clarity of thought, those who can write will have an edge over those who do not. While most would want to seek a solution by prompting the next GPT, people who will focus on the questions and showcase agency will stand out. Original writing is one way But what can we write that is not derivative ?\nThe most original thing that one can do right now is to journal their curiosity. Write about what piques your curiosity. Write about what steps you took to educate yourself. Write about the experiments that you undertook. Write about the failures that you encountered. Write like you are an explorer on a journey into the unknown. Thus even with advent of AI systems when writing good is no longer a novelty, one must strive to journal their curiosity."
   },
   {
     "objectID": "index.html",
@@ -25,41 +25,13 @@
     "href": "index.html#recent-activity",
     "title": "Beyond Shunya",
     "section": "🆕 Recent activity",
-    "text": "🆕 Recent activity\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n2024-06-01\n\n\nJournal your curiosity\n\n\n\n\n\nNo matching items"
+    "text": "🆕 Recent activity\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n2025-03-16\n\n\nJournal your curiosity\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "bookshelf/bookshelf.html",
-    "href": "bookshelf/bookshelf.html",
+    "objectID": "bookshelf.html",
+    "href": "bookshelf.html",
     "title": "Beyond Shunya",
     "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "books/listing.html",
-    "href": "books/listing.html",
-    "title": "Beyond Shunya",
-    "section": "",
-    "text": "title: “The Dispossessed” author: “Ursula K. Le Guin” reviewed: false\ntitle: “Deep Work” author: “Cal Newport” reviewed: true"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Beyond Shunya",
-    "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 1, 2024\n\n\nJournal your curiosity\n\n\n \n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "blog/journal-your-curiosity.html",
-    "href": "blog/journal-your-curiosity.html",
-    "title": "Journal your curiosity",
-    "section": "",
-    "text": "For people who are familiar with the Turing test, they have known for a while that the current AI systems have far surpassed it. While getting more intelligent systems unlocks a lot of value, overreliance on such tools will have counter effects.\nCurrent models have the compressed knowledge of the entire internet and they are able to use that knowledge to produce coherent body of text. This is going to take the novelty away from people who could write well. You can throw a half baked thought into this black box and it will turn it into the most eloquent writing you have seen. Clear, concise and to the point.\nAI systems give you super power of writing clearly without really putting in the effort. Writing requires thinking systematically. It requires a lot of effort to come up with good writing. With AI systems people will invariably take path of least resistance and delegate the critical step between ideation and writing to the AI. It will to distinct classes of people that Paul Graham describes as writes and write-nots.\nSince writing is an extension of clarity of thought, those who can write will have an edge over those who do not. While most would want to seek a solution by prompting the next GPT, people who will focus on the questions and showcase agency will stand out. Original writing is one way But what can we write that is not derivative ?\nThe most original thing that one can do right now is to journal their curiosity. Write about what piques your curiosity. Write about what steps you took to educate yourself. Write about the experiments that you undertook. Write about the failures that you encountered. Write like you are an explorer on a journey into the unknown. Thus even with advent of AI systems when writing good is no longer a novelty, one must strive to journal their curiosity."
-  },
-  {
-    "objectID": "blog/journal-your-curiosity.html#footnotes",
-    "href": "blog/journal-your-curiosity.html#footnotes",
-    "title": "Journal your curiosity",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nhttps://humsci.stanford.edu/feature/study-finds-chatgpts-latest-bot-behaves-humans-only-better↩︎"
+    "text": "Following are some books I’ve read, currently unordered.\n\n\n\nThe Dispossessed by Ursula K. Le Guin\n\n\nDeep Work by Cal Newport\n\n\nVagabond by Takehiko Inoue\n\n\nMasters of Doom by David Kushner\n\n\nThe Courage to Be Disliked by Ichiro Kishimi and Fumitake Koga\n\n\nDark Matter by Blake Crouch\n\n\nThe Prophet by Kahlil Gibran\n\n\nWhen Breath Becomes Air by Paul Kalanithi\n\n\nTao Te Ching by Lao Tzu (translated by Ursula K. Le Guin)\n\n\nDune by Frank Herbert\n\n\nVivekananda Reader by Swami Vivekananda\n\n\n\n\nNo matching items"
   }
 ]

@@ -1,6 +1,6 @@
 ---
 title: "Journal your curiosity"
-date: "2024-06-01"
+date: "2025-03-16"
 categories: [general, ai]
 ---
 
