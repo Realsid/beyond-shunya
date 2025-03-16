@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Musings on this life. Contains essays, technical writings and a collection of books I’ve read.">
 
 <title>Beyond Shunya</title>
 <style>
@@ -74,20 +73,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-recent-activity .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-recent-activity'] = new List('listing-recent-activity', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -133,15 +132,13 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="Beyond Shunya">
-<meta name="twitter:description" content="Musings on this life. Contains essays, technical writings and a collection of books I’ve read.">
-<meta name="twitter:image" content="https://www.beyondshunya.com/quarto.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -156,7 +153,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -172,39 +169,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#recent-activity" id="toc-recent-activity" class="nav-link active" data-scroll-target="#recent-activity">🆕 Recent activity</a></li>
-  </ul>
-</nav>
+        
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ai">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="general">general <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
-<div class="profile-header">
-<p>Hi, I’m Sidharth.</p>
-<p>In past life I have worked as a machine learning engineer in various startups.</p>
-<p>I’m currently focused on increasing net value that I can bring to the world.</p>
-<p>You can also find me on <a href="https://x.com/sid_on_x">X</a>.</p>
-</div>
-<section id="recent-activity" class="level2">
-<h2 class="anchored" data-anchor-id="recent-activity">🆕 Recent activity</h2>
-<div id="listing-recent-activity" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <table class="quarto-listing-table table">
 <thead>
 <tr>
@@ -214,15 +195,21 @@ Date
 <th>
 Title
 </th>
+<th>
+Author
+</th>
 </tr>
 </thead>
 <tbody class="list">
 <tr data-index="0" data-categories="general,ai" data-listing-date-sort="1717180200000" data-listing-file-modified-sort="1742136239708" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="320" data-listing-title-sort="Journal your curiosity" data-listing-filename-sort="journal-your-curiosity.qmd">
 <td>
-<span class="listing-date">2024-06-01</span>
+<span class="listing-date">Jun 1, 2024</span>
 </td>
 <td>
 <a href="./blog/journal-your-curiosity.html" class="title listing-title">Journal your curiosity</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
 </td>
 </tr>
 </tbody>
@@ -230,13 +217,7 @@ Title
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div>
-
-
-
-</section>
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

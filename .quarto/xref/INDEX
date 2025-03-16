@@ -49,5 +49,29 @@
   },
   "bookshelf/mastery.qmd": {
     "mastery.html": "8613421d"
+  },
+  "essays/execution.qmd": {
+    "execution.html": "06d3272a"
+  },
+  "bookshelf/bookshelf.qmd": {
+    "bookshelf.html": "8ea23130"
+  },
+  "books/mastery.qmd": {
+    "mastery.html": "9f09ab26"
+  },
+  "books/deep-work.qmd": {
+    "deep-work.html": "c34895a3"
+  },
+  "books/listing.qmd": {
+    "listing.html": "55ad406a"
+  },
+  "blog/execution.qmd": {
+    "execution.html": "3a48c6ab"
+  },
+  "blog/interview-readiness.qmd": {
+    "interview-readiness.html": "1b401f52"
+  },
+  "blog/journal-your-curiosity.qmd": {
+    "journal-your-curiosity.html": "f6c093eb"
   }
 }

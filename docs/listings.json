@@ -9,6 +9,20 @@
   },
   {
     "listing": "/index.html",
-    "items": []
+    "items": [
+      "/blog/journal-your-curiosity.html"
+    ]
+  },
+  {
+    "listing": "/bookshelf/bookshelf.html",
+    "items": [
+      "/bookshelf/book_listing.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/journal-your-curiosity.html"
+    ]
   }
 ]

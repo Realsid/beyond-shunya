@@ -1,6 +1,6 @@
 ---
 listing:
-  contents: essays
+  contents: blog
   sort: "date desc"
   type: table
   categories: true

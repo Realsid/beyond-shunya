@@ -4,10 +4,20 @@
       "essays"
     ],
     "index.qmd": [
-      "essays"
+      "essays",
+      "blog"
     ],
     "bookshelf.qmd": [
-      "bookshelf"
+      "bookshelf",
+      "books",
+      "books/listing.qmd"
+    ],
+    "bookshelf/bookshelf.qmd": [
+      "book_listing.qmd",
+      "."
+    ],
+    "blog.qmd": [
+      "blog"
     ]
   }
 }

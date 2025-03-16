@@ -1,5 +1,14 @@
-<ul>
+<section>
+    <p>Following are some books I've read, currently unordered.</p>
+    <ul>
     <% for (const item of items) { %>
-      <li><a href="<%- item.path %>"><%= item.title %></a></li>
+      <li>
+        <% if (item.href) { %>
+          <a href="<%- item.href %>"><%= item.title %> by <%= item.author %></a>
+        <% } else { %>
+          <%= item.title %> by <%= item.author %>
+        <% } %>
+      </li>
     <% } %>
 </ul>
+</section>

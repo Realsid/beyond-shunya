@@ -1,7 +1,0 @@
----
-title: "Deep Work"
-author: "Cal Newport"
-date: 2025-03-11
-draft: true
----
-

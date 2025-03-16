@@ -1,0 +1,15 @@
+---
+title: "Journal your curiosity"
+date: "2024-06-01"
+categories: [general, ai]
+---
+
+For people who are familiar with the Turing test, they have known for a while that the current AI systems have far [surpassed it](https://humsci.stanford.edu/feature/study-finds-chatgpts-latest-bot-behaves-humans-only-better). While getting more intelligent systems unlocks a lot of value, overreliance on such tools will have counter effects.
+
+Current models have the compressed knowledge of the entire internet and they are able to use that knowledge to produce coherent body of text. This is going to take the novelty away from people who could write well. You can throw a half baked thought into this black box and it will turn it into the most eloquent writing you have seen. Clear, concise and to the point. 
+
+AI systems give you super power of writing clearly without really putting in the effort. Writing requires thinking systematically. It requires a lot of effort to come up with good writing. With AI systems people will invariably take path of least resistance and delegate the critical step between ideation and writing to the AI. It will to distinct classes of people that Paul Graham describes as [writes and write-nots](https://paulgraham.com/writes.html). 
+
+Since writing is an extension of clarity of thought, those who can write will have an edge over those who do not. While most would want to seek a solution by prompting the next GPT, people who will focus on the questions and showcase agency will stand out. Original writing is one way  But what can we write that is not derivative ? 
+
+The most original thing that one can do right now is to journal their curiosity. Write about what piques your curiosity. Write about what steps you took to educate yourself. Write about the experiments that you undertook. Write about the failures that you encountered. Write like you are an explorer on a journey into the unknown. Thus even with advent of AI systems when writing good is no longer a novelty, one must strive to journal their curiosity.

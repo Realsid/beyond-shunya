@@ -10,9 +10,9 @@ listing:
   sort-ui: false
   sort: "date desc"
   categories: true
-  fields: [date, title, categories]
+  fields: [date, title]
   id: recent-activity
-  contents: [essays]
+  contents: [blog]
 format:
   html:
     anchor-sections: true

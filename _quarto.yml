@@ -1,19 +1,20 @@
 project:
   type: website
   output-dir: docs
+  preview:
+    port: 4200
 
 website:
+  site-url: https://www.beyondshunya.com
   title: "Beyond Shunya"
+  twitter-card: true
   navbar:
-    pinned: true
-    search: true
+    pinned: false
     left:
-      - text: "home"
-        href: index.qmd
-      - text: "essays"
-        href: essays.qmd
-      - text: "bookshelf"
-        href: bookshelf.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "Bookshelf"
+        href: "bookshelf.qmd"
   page-footer: 
     right: 
       - icon: github
@@ -26,8 +27,8 @@ website:
 format:
   html:
     theme: 
-      dark: darkly
-      light: flalty
+      dark: [darkly, custom.scss]
+      light: [flattly, custom.scss]
     css: styles.css
     toc: true
 execute:
