@@ -5,40 +5,7 @@ listing:
   sort-ui: false
   filter-ui: false
   template: templates/bookshelf.ejs
-  contents:
-    - title: "The Dispossessed"
-      author: "Ursula K. Le Guin"
-      genre: "sci-fi"
-    - title: "Deep Work"
-      author: "Cal Newport"
-      genre: "self-help"
-    - title: "Vagabond"
-      author: "Takehiko Inoue"
-      genre: "manga"
-    - title: "Masters of Doom"
-      author: "David Kushner"
-      genre: "non-fiction"
-    - title: "The Courage to Be Disliked"
-      author: "Ichiro Kishimi and Fumitake Koga"
-      genre: "self-help"
-    - title: "Dark Matter"
-      author: "Blake Crouch"
-      genre: "sci-fi"
-    - title: "The Prophet"
-      author: "Kahlil Gibran"
-      genre: "philosophy"
-    - title: "When Breath Becomes Air"
-      author: "Paul Kalanithi"
-      genre: "non-fiction"
-    - title: "Tao Te Ching"
-      author: "Lao Tzu (translated by Ursula K. Le Guin)"
-      genre: "philosophy"
-    - title: "Dune"
-      author: "Frank Herbert"
-      genre: "sci-fi"
-    - title: "Vivekananda Reader"
-      author: "Swami Vivekananda"
-      genre: "philosophy"
+  contents: books/listing.yaml
 page-layout: full
 title-block-banner: true
 ---

@@ -1,0 +1,44 @@
+- title: "The Dispossessed"
+  author: "Ursula K. Le Guin"
+  genre: "sci-fi"
+  rating: 5
+- title: "Deep Work"
+  author: "Cal Newport"
+  genre: "self-help"
+  rating: 4
+- title: "Vagabond"
+  author: "Takehiko Inoue"
+  genre: "manga"
+  rating: 5
+- title: "Masters of Doom"
+  author: "David Kushner"
+  genre: "non-fiction"
+  rating: 4
+- title: "The Courage to Be Disliked"
+  author: "Ichiro Kishimi and Fumitake Koga"
+  genre: "self-help"
+  rating: 3
+- title: "Dark Matter"
+  author: "Blake Crouch"
+  genre: "sci-fi"
+  rating: 4
+- title: "The Prophet"
+  author: "Kahlil Gibran"
+  genre: "philosophy"
+  rating: 5
+- title: "When Breath Becomes Air"
+  author: "Paul Kalanithi"
+  genre: "non-fiction"
+  rating: 5
+- title: "Tao Te Ching"
+  author: "Lao Tzu (translated by Ursula K. Le Guin)"
+  genre: "philosophy"
+  rating: 5
+- title: "Dune"
+  author: "Frank Herbert"
+  genre: "sci-fi"
+  rating: 5
+- title: "Vivekananda Reader"
+  author: "Swami Vivekananda"
+  genre: "philosophy"
+  rating: 4 
