@@ -26,35 +26,65 @@ function Pandoc(doc)
   /* CSS to override iframe dimensions and create consistent layout */
   .social-share-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
     margin: 20px 0;
   }
   .social-share-item {
-    margin-bottom: 8px;
-    min-height: 28px;
     display: flex;
     align-items: center;
   }
-  .twitter-container iframe {
-    margin: 0 !important;
-    vertical-align: middle !important;
-  }
-  .hn-button {
+  .social-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
-    color: #ff6600;
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14px;
-    height: 28px;
-    line-height: 28px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 18px;
+    padding: 0 16px;
+    transition: opacity 0.2s;
+    min-width: 110px;
   }
-  .hn-button-icon {
+  .social-btn:hover {
+    opacity: 0.9;
+  }
+  .social-btn-icon {
+    font-weight: bold;
+    margin-right: 8px;
     display: inline-block;
+  }
+  .social-btn-text {
+    display: inline-block;
+  }
+  .twitter-btn {
+    background-color: #000000;
+    color: white;
+  }
+  .hn-btn {
     background-color: #ff6600;
     color: white;
-    padding: 1px 4px;
-    margin-right: 5px;
+  }
+  .linkedin-btn {
+    background-color: #0077b5;
+    color: white;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .social-btn {
+      min-width: unset;
+      width: 36px;
+      padding: 0;
+    }
+    .social-btn-text {
+      display: none;
+    }
+    .social-btn-icon {
+      margin-right: 0;
+    }
   }
 </style>
 
@@ -75,30 +105,16 @@ function Pandoc(doc)
     
     // Twitter button
     const twitterDiv = document.createElement('div');
-    twitterDiv.className = 'social-share-item twitter-container';
+    twitterDiv.className = 'social-share-item';
     twitterDiv.innerHTML = `
-      <a href="https://twitter.com/share" 
-         class="twitter-share-button" 
-         data-url="${pageUrl}" 
-         data-text="Check out this post - ${pageTitle}">
-        Tweet
+      <a href="https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}"
+         target="_blank" 
+         class="social-btn twitter-btn">
+        <span class="social-btn-icon">𝕏</span>
+        <span class="social-btn-text">Post</span>
       </a>
     `;
     container.appendChild(twitterDiv);
-    
-    // Load Twitter widget
-    const twitterScript = document.createElement('script');
-    twitterScript.innerHTML = `
-      !function(d,s,id){
-        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-        if(!d.getElementById(id)){
-          js=d.createElement(s);js.id=id;
-          js.src=p+'://platform.twitter.com/widgets.js';
-          fjs.parentNode.insertBefore(js,fjs);
-        }
-      }(document, 'script', 'twitter-wjs');
-    `;
-    document.body.appendChild(twitterScript);
     
     // Hacker News button
     const hnDiv = document.createElement('div');
@@ -106,9 +122,9 @@ function Pandoc(doc)
     hnDiv.innerHTML = `
       <a href="https://news.ycombinator.com/submitlink?u=${encodedUrl}&t=${encodedTitle}" 
          target="_blank" 
-         class="hn-button">
-        <span class="hn-button-icon">Y</span>
-        <span>Share on HN</span>
+         class="social-btn hn-btn">
+        <span class="social-btn-icon">Y</span>
+        <span class="social-btn-text">Submit to HN</span>
       </a>
     `;
     container.appendChild(hnDiv);
@@ -117,31 +133,14 @@ function Pandoc(doc)
     const linkedinDiv = document.createElement('div');
     linkedinDiv.className = 'social-share-item';
     linkedinDiv.innerHTML = `
-      <div class="linkedin-share-button"></div>
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}" 
+         target="_blank" 
+         class="social-btn linkedin-btn">
+         <span class="social-btn-icon">in</span>
+         <span class="social-btn-text">Share on LinkedIn</span>
+      </a>
     `;
     container.appendChild(linkedinDiv);
-    
-    // Load LinkedIn widget
-    const linkedinScript = document.createElement('script');
-    linkedinScript.src = 'https://platform.linkedin.com/in.js';
-    linkedinScript.type = 'text/javascript';
-    linkedinScript.innerHTML = 'lang: en_US';
-    document.body.appendChild(linkedinScript);
-    
-    // Create LinkedIn share button after script loads
-    linkedinScript.onload = function() {
-      if (typeof IN !== 'undefined') {
-        IN.init();
-        const linkedinButtonContainer = document.querySelector('.linkedin-share-button');
-        const button = document.createElement('script');
-        button.type = 'IN/Share';
-        button.setAttribute('data-url', pageUrl);
-        linkedinButtonContainer.appendChild(button);
-        if (typeof IN.parse === 'function') {
-          IN.parse();
-        }
-      }
-    };
   });
 </script>
 ]]
