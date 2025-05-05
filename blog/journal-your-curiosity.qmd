@@ -2,6 +2,9 @@
 title: "Journal your curiosity"
 date: "2025-03-16"
 categories: [general, ai]
+social-share: true
+filters:
+  - socials
 ---
 
 For people who are familiar with the Turing test, they have known for a while that the current AI systems have far [surpassed it](https://humsci.stanford.edu/feature/study-finds-chatgpts-latest-bot-behaves-humans-only-better). While getting more intelligent systems unlocks a lot of value, overreliance on such tools will have counter effects.

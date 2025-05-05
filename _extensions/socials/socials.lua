@@ -19,12 +19,7 @@ function Pandoc(doc)
       title = " - " .. title_blocks
     end
     
-    -- Get the page URL
-    local page_url = ""
-    if meta["site-url"] then
-      page_url = pandoc.utils.stringify(meta["site-url"])
-    end
-    
+    -- Get the page URL using JavaScript instead of metadata
     -- Create the social sharing HTML block
     local social_html = [[
 <style>
@@ -63,34 +58,92 @@ function Pandoc(doc)
   }
 </style>
 
-<div class="social-share-container">
-  <!-- X/Twitter Post button -->
-  <div class="social-share-item twitter-container">
-    <a href="https://twitter.com/share" 
-       class="twitter-share-button" 
-       data-url="]] .. page_url .. [[" 
-       data-text="Check out this post]] .. title .. [[">
-      Tweet
-    </a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  
-  <!-- Hacker News share button -->
-  <div class="social-share-item">
-    <a href="https://news.ycombinator.com/submitlink?u=]] .. page_url .. [[&t=]] .. title .. [[" 
-       target="_blank" 
-       class="hn-button">
-      <span class="hn-button-icon">Y</span>
-      <span>Share on HN</span>
-    </a>
-  </div>
-  
-  <!-- LinkedIn share button -->
-  <div class="social-share-item">
-    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-    <script type="IN/Share" data-url="]] .. page_url .. [["></script>
-  </div>
+<div class="social-share-container" id="social-share-container">
+  <!-- Social share buttons will be inserted here by JavaScript -->
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page URL
+    const pageUrl = window.location.href;
+    const encodedUrl = encodeURIComponent(pageUrl);
+    const pageTitle = document.title;
+    const encodedTitle = encodeURIComponent(pageTitle);
+    
+    // Create container for social buttons
+    const container = document.getElementById('social-share-container');
+    
+    // Twitter button
+    const twitterDiv = document.createElement('div');
+    twitterDiv.className = 'social-share-item twitter-container';
+    twitterDiv.innerHTML = `
+      <a href="https://twitter.com/share" 
+         class="twitter-share-button" 
+         data-url="${pageUrl}" 
+         data-text="Check out this post - ${pageTitle}">
+        Tweet
+      </a>
+    `;
+    container.appendChild(twitterDiv);
+    
+    // Load Twitter widget
+    const twitterScript = document.createElement('script');
+    twitterScript.innerHTML = `
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){
+          js=d.createElement(s);js.id=id;
+          js.src=p+'://platform.twitter.com/widgets.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document, 'script', 'twitter-wjs');
+    `;
+    document.body.appendChild(twitterScript);
+    
+    // Hacker News button
+    const hnDiv = document.createElement('div');
+    hnDiv.className = 'social-share-item';
+    hnDiv.innerHTML = `
+      <a href="https://news.ycombinator.com/submitlink?u=${encodedUrl}&t=${encodedTitle}" 
+         target="_blank" 
+         class="hn-button">
+        <span class="hn-button-icon">Y</span>
+        <span>Share on HN</span>
+      </a>
+    `;
+    container.appendChild(hnDiv);
+    
+    // LinkedIn button
+    const linkedinDiv = document.createElement('div');
+    linkedinDiv.className = 'social-share-item';
+    linkedinDiv.innerHTML = `
+      <div class="linkedin-share-button"></div>
+    `;
+    container.appendChild(linkedinDiv);
+    
+    // Load LinkedIn widget
+    const linkedinScript = document.createElement('script');
+    linkedinScript.src = 'https://platform.linkedin.com/in.js';
+    linkedinScript.type = 'text/javascript';
+    linkedinScript.innerHTML = 'lang: en_US';
+    document.body.appendChild(linkedinScript);
+    
+    // Create LinkedIn share button after script loads
+    linkedinScript.onload = function() {
+      if (typeof IN !== 'undefined') {
+        IN.init();
+        const linkedinButtonContainer = document.querySelector('.linkedin-share-button');
+        const button = document.createElement('script');
+        button.type = 'IN/Share';
+        button.setAttribute('data-url', pageUrl);
+        linkedinButtonContainer.appendChild(button);
+        if (typeof IN.parse === 'function') {
+          IN.parse();
+        }
+      }
+    };
+  });
+</script>
 ]]
     
     -- Add the social sharing HTML block to the end of the document
