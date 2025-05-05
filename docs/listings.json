@@ -2,12 +2,14 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/read-protocols.html",
       "/blog/journal-your-curiosity.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/blog/read-protocols.html",
       "/blog/journal-your-curiosity.html"
     ]
   },

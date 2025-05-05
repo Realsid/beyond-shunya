@@ -1,0 +1,13 @@
+---
+title: "Developers should read protocols"
+date: "2025-04-15"
+categories: [software]
+social-share: true
+filters:
+  - socials
+---
+Protocols are at the heart of software development. Beneath your frameworks lie copious rules that define the behavior of the application. As a developer, I strongly recommend reading a protocol end-to-end. While not required to work in the field, this practice has helped me appreciate the thought put behind technology that makes the internet. 
+
+Reading a protocol gives you the view of why certain design decisions were taken and what trade offs were considered. For example, reading the JSON-RPC protocol you would come to know why the `id` member of the response object cannot be a fraction since many fractions don't have exact representation in binary format. You will also come to know what documenting a system entails, for example what does an interaction look like (request/response) and what errors are raised if something goes wrong etc.
+
+One issue regarding protocols is that they can be verbose (HTTP protocol is 177 pages !). Now if reading is not your thing worry not ! You can start with [JSON-RPC](https://www.jsonrpc.org/specification), a tiny yet well-defined protocol that serves as an excellent introduction to understanding how these fundamental building blocks of software are structured and documented.

@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "socials/example.html",
+    "href": "socials/example.html",
+    "title": "Twitter Share Button Example",
+    "section": "",
+    "text": "This example demonstrates how to add a Twitter share button to your Quarto document.\nAll you need to do is add twitter: true to your document’s YAML metadata.\nA Twitter share button will automatically appear at the bottom of your document.\n\n\n\n  \n    Tweet this post"
+  },
+  {
+    "objectID": "socials/example.html#twitter-share-button-demo",
+    "href": "socials/example.html#twitter-share-button-demo",
+    "title": "Twitter Share Button Example",
+    "section": "",
+    "text": "This example demonstrates how to add a Twitter share button to your Quarto document.\nAll you need to do is add twitter: true to your document’s YAML metadata.\nA Twitter share button will automatically appear at the bottom of your document.\n\n\n\n  \n    Tweet this post"
+  }
+]
