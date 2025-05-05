@@ -3,11 +3,12 @@ project:
   output-dir: docs
   preview:
     port: 4200
+extensions:
+  - socials
 
 website:
   site-url: https://www.beyondshunya.com
   title: "Beyond Shunya"
-  twitter-card: true
   navbar:
     pinned: false
     left:
@@ -31,5 +32,7 @@ format:
       light: [flattly, custom.scss]
     css: styles.css
     toc: true
+    filters:
+      - socials
 execute:
   freeze: auto

@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Beyond Shunya",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMar 16, 2025\n\n\nJournal your curiosity\n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\n\n\n\n\nApr 15, 2025\n\n\nDevelopers should read protocols\n\n\n\n\nMar 16, 2025\n\n\nJournal your curiosity\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/journal-your-curiosity.html",
@@ -25,7 +25,14 @@
     "href": "index.html#recent-activity",
     "title": "Beyond Shunya",
     "section": "🆕 Recent activity",
-    "text": "🆕 Recent activity\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n2025-03-16\n\n\nJournal your curiosity\n\n\n\n\n\nNo matching items"
+    "text": "🆕 Recent activity\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n2025-04-15\n\n\nDevelopers should read protocols\n\n\n\n\n2025-03-16\n\n\nJournal your curiosity\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/read-protocols.html",
+    "href": "blog/read-protocols.html",
+    "title": "Developers should read protocols",
+    "section": "",
+    "text": "Protocols are at the heart of software development. Beneath your frameworks lie copious rules that define the behavior of the application. As a developer, I strongly recommend reading a protocol end-to-end. While not required to work in the field, this practice has helped me appreciate the thought put behind technology that makes the internet.\nReading a protocol gives you the view of why certain design decisions were taken and what trade offs were considered. For example, reading the JSON-RPC protocol you would come to know why the id member of the response object cannot be a fraction since many fractions don’t have exact representation in binary format. You will also come to know what documenting a system entails, for example what does an interaction look like (request/response) and what errors are raised if something goes wrong etc.\nOne issue regarding protocols is that they can be verbose (HTTP protocol is 177 pages !). Now if reading is not your thing worry not ! You can start with JSON-RPC, a tiny yet well-defined protocol that serves as an excellent introduction to understanding how these fundamental building blocks of software are structured and documented.\n\n\n\n\n\n  \n  \n    \n      Tweet\n    \n    \n  \n  \n  \n  \n    \n      Y\n      Share on HN"
   },
   {
     "objectID": "bookshelf.html",
@@ -33,5 +40,12 @@
     "title": "Beyond Shunya",
     "section": "",
     "text": "Following are some books I’ve read, currently unordered.\n\n\n\nThe Dispossessed by Ursula K. Le Guin\n\n\nDeep Work by Cal Newport\n\n\nVagabond by Takehiko Inoue\n\n\nMasters of Doom by David Kushner\n\n\nThe Courage to Be Disliked by Ichiro Kishimi and Fumitake Koga\n\n\nDark Matter by Blake Crouch\n\n\nThe Prophet by Kahlil Gibran\n\n\nWhen Breath Becomes Air by Paul Kalanithi\n\n\nTao Te Ching by Lao Tzu (translated by Ursula K. Le Guin)\n\n\nDune by Frank Herbert\n\n\nVivekananda Reader by Swami Vivekananda\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#ads-recent-activity",
+    "href": "index.html#ads-recent-activity",
+    "title": "Beyond Shunya",
+    "section": "ads Recent activity",
+    "text": "ads Recent activity\n\n\n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n2025-04-15\n\n\nDevelopers should read protocols\n\n\n\n\n2025-03-16\n\n\nJournal your curiosity\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\n  Socials filter is running!"
   }
 ]
