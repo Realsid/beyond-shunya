@@ -2,3 +2,4 @@
 /_site/
 /.quarto/
 docs/
+.DS_Store
