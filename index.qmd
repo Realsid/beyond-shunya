@@ -9,7 +9,6 @@ listing:
   type: table
   sort-ui: false
   sort: "date desc"
-  categories: true
   fields: [date, title]
   id: recent-activity
   contents: [blog]

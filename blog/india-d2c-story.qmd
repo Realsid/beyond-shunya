@@ -1,0 +1,14 @@
+---
+title: "Indian D2C story: Is there a formula for success ?"
+date: "2025-04-15"
+categories: [startups]
+social-share: true
+filters:
+  - socials
+---
+
+- D2C story starts with servicing an existing desire but in a way that the current supplier is lagging in. 
+```
+    For example the founders of Sleepy Owl were coffee drinkers who noticed the lack of great coffee options at work, leading to the idea for their brand. Similarly, the 
+    founder of The Moms Co. was motivated by the difficulty of finding suitable products for a child with sensitive skin
+```
