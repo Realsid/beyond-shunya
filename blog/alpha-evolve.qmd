@@ -1,0 +1,33 @@
+---
+title: "Alphaevolve"
+date: "2025-06-01"
+categories: [ai]
+social-share: true
+filters:
+  - socials
+---
+
+- Keyword here is "Evolutionary coding agent"
+- A general purpose algorithm discovery and optimazation agent
+- "AlphaEvolve enhanced the efficiency of Google's data centers, chip design and AI training processes — including training the large language models underlying AlphaEvolve itself." Big deal, this is a sneak peek of incoming recursive progress, where machines self improve. Sam Altmans innovators timeline is become real by the day. 
+
+```{mermaid}
+flowchart TB
+    problem["Problem Definition"] --> skeleton["Program Skeleton"]
+    skeleton --> database["Programs Database"]
+    
+    database --> prompt["Best Programs as Examples"]
+    prompt --> llm["Large Language Model"]
+    llm --> newprog["Generated Improvements"]
+    
+    newprog --> eval["Automatic Evaluation"]
+    eval -->|Valid & Scored| database
+    
+    database -->|Best Solutions| results["Scientific Discoveries"]
+    
+    classDef highlight fill:#ffffff,stroke:#4fd1ff,stroke-width:2px;
+    classDef normal fill:#f0f0f0,stroke:#2ecc71,stroke-width:1px;
+    
+    class problem,results highlight;
+    class skeleton,prompt,llm,newprog,eval,database normal;
+```
