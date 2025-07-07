@@ -8,13 +8,15 @@ extensions:
 
 website:
   site-url: https://www.beyondshunya.com
-  title: "Beyond Shunya"
+  title: ""
   navbar:
     pinned: false
+    search: false
+    title: "Beyond Shunya"
     left:
-      - text: "Blog"
-        href: blog.qmd
-      - text: "Bookshelf"
+      - text: "posts"
+        href: "posts.qmd"
+      - text: "bookshelf"
         href: "bookshelf.qmd"
   page-footer: 
     right: 
@@ -28,8 +30,8 @@ website:
 format:
   html:
     theme: 
-      dark: [darkly, custom.scss]
-      light: [flattly, custom.scss]
+      - litera
+      - custom.scss
     css: styles.css
     toc: true
     filters:

@@ -1,9 +1,3 @@
--- Reformat all heading text 
-function Header(el)
-  el.content = pandoc.Emph(el.content)
-  return el
-end
-
 -- Add social share buttons when social-share: true is specified in metadata
 function Pandoc(doc)
   -- Get the document metadata
