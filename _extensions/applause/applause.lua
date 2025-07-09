@@ -2,13 +2,14 @@
 function Pandoc(doc)
     -- Get the document metadata
     local meta = doc.meta
-
+    -- print the metadata
+    for k, v in pairs(meta) do
+        print(k, pandoc.utils.stringify(v))
+    end
     -- Check if applause is enabled in the metadata
     if meta["applause"] and (meta["applause"] == true or meta["applause"].boolean) then
-        -- Create the applause button HTML block with dark theme
         local applause_html = [[
 <style>
-  /* Applause button container styling */
   .applause-container {
     display: flex;
     justify-content: center;
@@ -16,25 +17,24 @@ function Pandoc(doc)
     padding: 10px;
   }
 </style>
-
-<!-- Applause Button CSS and JS from CDN -->
 <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css" />
 <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+<div class="applause-container" id="applause-container"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var url = window.location.origin + window.location.pathname;
+    var canonical = document.querySelector('link[rel=canonical]');
+    if (canonical) url = canonical.href;
 
-<div class="applause-container">
-  <applause-button id="applause-btn" style="width: 58px; height: 58px;" color="var(--bs-dark)" multiclap="true"></applause-button>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var applauseBtn = document.getElementById('applause-btn');
-      if (applauseBtn) {
-        // Use canonical URL if available, otherwise fallback to origin+pathname
-        var canonical = document.querySelector('link[rel=canonical]');
-        var url = canonical ? canonical.href : window.location.origin + window.location.pathname;
-        applauseBtn.setAttribute('url', url);
-      }
-    });
-  </script>
-</div>
+    var applauseBtn = document.createElement('applause-button');
+    applauseBtn.setAttribute('style', 'width: 58px; height: 58px;');
+    applauseBtn.setAttribute('color', 'var(--bs-dark)');
+    applauseBtn.setAttribute('multiclap', 'true');
+    applauseBtn.setAttribute('url', url);
+
+    document.getElementById('applause-container').appendChild(applauseBtn);
+  });
+</script>
 ]]
 
         -- Add the applause button HTML block to the end of the document
