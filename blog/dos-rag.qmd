@@ -1,0 +1,202 @@
+---
+title: "Implementing RAG with Document Original Structure"
+date: "2025-06-26"
+categories: [ai, llm, rag, notebook]
+social-share: true
+---
+
+## 1. Background on RAG
+
+Retrieval augmented generation is one of the most popular applications of LLMs. It involves feeding the LLM with context that informs its generation, thus grounding the response in our custom data. Why would we want to do that? As good as LLMs are at language understanding, their knowledge is still frozen in time, in terms of their knowledge cutoff. So, when we need to supply the LLM with some external context, we use RAG.
+
+Given a particular query, RAG works around the limited input token window size that an LLM has by only supplying relevant context.
+
+At a high level, a typical RAG workflow looks like the following:
+
+![RAG Workflow](../img/rag-workflow.png){#fig-rag-workflow}
+
+In this notebook, we will implement a type of RAG pipeline which proves to be a very strong baseline among many known RAG methods, as observed in this [research paper](http://arxiv.org/abs/2506.03989). It's called Document Original Structure RAG (DOS-RAG). The core idea is that after similarity matching, the retrieved document chunks are ordered based on their original order in the document rather than sorting by chunk score.
+
+Let's get started!
+
+## 2. Load the data
+
+We will be using a chapter from a science textbook to demonstrate this technique. Let's see what it looks like!
+
+```{python}
+import pymupdf  # PyMuPDF
+import matplotlib.pyplot as plt
+from PIL import Image
+import io
+
+# Read the PDF file
+pdf_path = "../assets/dos-rag/atoms and molecules.pdf"
+doc = pymupdf.open(pdf_path)
+
+# Get the first page
+first_page = doc[0]
+
+# Convert page to image
+mat = first_page.get_pixmap(matrix=pymupdf.Matrix(2, 2))  # 2x zoom for better quality
+img_data = mat.tobytes("png")
+# Convert to PIL Image for display
+img = Image.open(io.BytesIO(img_data))
+# Get image dimensions
+width, height = img.size
+
+# Crop the top half
+top_half = img.crop((0, 0, width, height // 2))
+
+# Display the top half
+plt.figure(figsize=(10, 6))
+# Display the image
+plt.figure(figsize=(10, 12))
+plt.imshow(top_half)
+plt.axis("off")
+plt.show()
+# Close the document
+doc.close()
+```
+
+---
+
+We will be using [lamaindex](https://docs.llamaindex.ai/en/stable/) which is a popular framework to do all things related to
+RAG and more. We will first load the pdf into a datastructure called [`document`](https://docs.llamaindex.ai/en/stable/) and then split the given documents in [chunks](https://stackoverflow.blog/2024/12/27/breaking-up-is-hard-to-do-chunking-in-rag-applications/).We'll use the `SimpleDirectoryReader` and `TextSplitter` utilities provided by LlamaIndex.
+
+```{python}
+from llama_index.core import SimpleDirectoryReader
+from llama_index.core.node_parser import SentenceSplitter
+
+# Load the PDF as a document
+documents = SimpleDirectoryReader(input_files=[pdf_path]).load_data()
+
+# Let's inspect the first document
+print(f"Number of documents loaded: {len(documents)}")
+print("Preview of the first document:")
+print(documents[0].text[:500])  # Show the first 500 characters
+```
+---
+
+Now, let's split the document into chunks. Chunking is important for efficient retrieval and to fit within the LLM's context window. We are usingt the `SentenceSplitter` class that creates chunks (nodes) keeping in mind proper sentence boundary. Also note that the parameters of `chunk_size` and `chunk_overlap` are set this way for this demo.
+
+```{python}
+# Split the document into nodes
+splitter = SentenceSplitter(chunk_size=512, chunk_overlap=128)
+nodes = splitter.get_nodes_from_documents(documents)
+
+print(f"Number of nodes created: {len(nodes)}")
+print("Preview of the first node:")
+print(nodes[0].text)
+```
+---
+
+For DOS-RAG to work we need the order information from the document e.g. page number and reading order. Let's access `metadata` of `node` to observe what we have. 
+```{python}
+print("Node info: ", nodes[0].get_node_info())
+print("Metadata: ", nodes[0].get_metadata_str())
+# Let's add the start idx of the node to the metadata, it will be used to order the nodes
+for node in nodes:
+    node.metadata["start_idx"] = node.get_node_info()["start"]
+```
+We have the page number and reading order information in the metadata. We will use this information to order the chunks post similarity matching and retrieval.
+
+## 3. Similarity matching and retrieval
+
+We will be using the `VectorStoreIndex` class to create an index of the nodes. We will use the `SimpleDirectoryReader` to load the data and the `SentenceSplitter` to split the document into chunks. We are using the `Gemini` model from google to create embeddings.
+
+```{python}
+# | echo: false
+# | output: false
+
+import os
+import dotenv
+
+loaded = dotenv.load_dotenv("../.env")
+``` 
+
+```{python}
+# | warning: false
+import os
+from llama_index.core import VectorStoreIndex
+from llama_index.core.ingestion import IngestionPipeline
+from llama_index.embeddings.gemini import GeminiEmbedding
+from llama_index.core import Settings
+
+model_name = "models/embedding-001"
+
+embed_model = GeminiEmbedding(model_name=model_name)
+
+index = VectorStoreIndex(nodes, embed_model=embed_model)
+
+query_engine = index.as_retriever(similarity_top_k=5)
+
+retrieved_nodes = query_engine.retrieve("What are atoms ?")
+
+for rn in retrieved_nodes:
+    node = rn.node
+    print("Page number: ", node.metadata["page_label"])
+    print("Score: ", rn.score)
+```
+
+---
+
+Now, let's order the retrieved nodes based on the page number and reading order as part of post processing.
+
+```{python}
+from llama_index.core import QueryBundle
+from llama_index.core.postprocessor.types import BaseNodePostprocessor
+from llama_index.core.schema import NodeWithScore
+from llama_index.llms.google_genai import GoogleGenAI
+from llama_index.core import Settings
+from functools import cmp_to_key
+from typing import Optional
+
+
+class DOSRAGNodePostprocessor(BaseNodePostprocessor):
+    def _postprocess_nodes(
+        self, nodes: list[NodeWithScore], query_bundle: Optional[QueryBundle]
+    ) -> list[NodeWithScore]:
+        """
+        This postprocessor orders the retrieved nodes based on the page number and reading order.
+        """
+
+        nodes = sorted(nodes, key=cmp_to_key(self._compare_nodes))
+
+        return nodes
+
+    def _compare_nodes(self, a: NodeWithScore, b: NodeWithScore) -> int:
+        """
+        Compare two nodes based on the page number and reading order.
+        """
+        if a.node.metadata["page_label"] == b.node.metadata["page_label"]:
+            return -1 if a.node.metadata["start_idx"] < b.node.metadata["start_idx"] else 1
+        else:
+            return -1 if a.node.metadata["page_label"] < b.node.metadata["page_label"] else 1
+
+
+Settings.llm = GoogleGenAI(model="gemini-2.5-flash-lite-preview-06-17")
+
+query_engine_0 = index.as_query_engine(node_postprocessors=[DOSRAGNodePostprocessor()], similarity_top_k=5)
+
+retrieved_nodes = query_engine_0.retrieve("What are atoms ?")
+
+for rn in retrieved_nodes:
+    node = rn.node
+    print("Page number: ", node.metadata["page_label"])
+    print("Score: ", rn.score)
+```
+---
+
+As we can see, post processing the nodes sorts them based on the page number and reading order rather than the score, which is the core idea behind DOS-RAG. This simple post processing step is enough to setup a good baseline for a RAG application.
+
+## Summary
+
+1. RAG is a powerful technique to improve the accuracy of LLM responses by providing it with relevant context.
+2. DOS-RAG is a simple post processing step that can be used to order the retrieved nodes based on the page number and reading order.
+3. We take a document and split it into chunks, create an index of the chunks and then retrieve the most relevant chunks based on the query.
+4. Using simple sorting of the retrieved nodes based on the page number and reading order, we can achieve a good baseline for a RAG application.
+
+## References
+
+- [DOS-RAG: Document-Oriented Similarity Search for Retrieval-Augmented Generation](https://arxiv.org/abs/2506.03989)
+- [LlamaIndex](https://docs.llamaindex.ai/en/stable/)

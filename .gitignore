@@ -3,3 +3,6 @@
 /.quarto/
 docs/
 .venv
+/.luarc.json
+.DS_Store
+.env
