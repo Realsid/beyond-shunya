@@ -198,5 +198,5 @@ As we can see, post processing the nodes sorts them based on the page number and
 
 ## References
 
-- [DOS-RAG: Document-Oriented Similarity Search for Retrieval-Augmented Generation](https://arxiv.org/abs/2506.03989)
+- [Stronger Baselines for Retrieval-Augmented Generation with Long-Context Language Models](https://arxiv.org/abs/2506.03989)
 - [LlamaIndex](https://docs.llamaindex.ai/en/stable/)
