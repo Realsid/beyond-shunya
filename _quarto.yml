@@ -8,7 +8,7 @@ extensions:
 
 website:
   site-url: https://www.beyondshunya.com
-  title: ""
+  title: "Beyond Shunya"
   navbar:
     pinned: false
     search: false
