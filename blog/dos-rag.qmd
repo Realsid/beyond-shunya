@@ -3,6 +3,9 @@ title: "Implementing RAG with Document Original Structure"
 date: "2025-06-26"
 categories: [ai, llm, rag, notebook]
 social-share: true
+applause: true
+execute:
+  freeze: true
 ---
 
 ## 1. Background on RAG
