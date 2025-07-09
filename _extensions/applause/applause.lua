@@ -22,7 +22,18 @@ function Pandoc(doc)
 <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
 
 <div class="applause-container">
-  <applause-button style="width: 58px; height: 58px;" color="var(--bs-dark)" multiclap="true" />
+  <applause-button id="applause-btn" style="width: 58px; height: 58px;" color="var(--bs-dark)" multiclap="true"></applause-button>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var applauseBtn = document.getElementById('applause-btn');
+      if (applauseBtn) {
+        // Use canonical URL if available, otherwise fallback to origin+pathname
+        var canonical = document.querySelector('link[rel=canonical]');
+        var url = canonical ? canonical.href : window.location.origin + window.location.pathname;
+        applauseBtn.setAttribute('url', url);
+      }
+    });
+  </script>
 </div>
 ]]
 
