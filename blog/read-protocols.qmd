@@ -3,6 +3,7 @@ title: "Developers should read protocols"
 date: "2025-04-15"
 categories: [software]
 social-share: true
+applause: true
 filters:
   - socials
 ---

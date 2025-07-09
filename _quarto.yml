@@ -4,6 +4,7 @@ project:
   preview:
     port: 4200
 extensions:
+  - applause
   - socials
 
 website:
@@ -35,6 +36,7 @@ format:
     css: styles.css
     toc: true
     filters:
+      - applause
       - socials
 execute:
   freeze: auto

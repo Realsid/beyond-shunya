@@ -3,6 +3,7 @@ title: "Journal your curiosity"
 date: "2025-03-16"
 categories: [general, ai]
 social-share: true
+applause: true
 filters:
   - socials
 ---
