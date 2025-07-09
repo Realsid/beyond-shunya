@@ -29,7 +29,7 @@ Let's play.
 ### Self
 I am Sidharth Singh. 
 
-In past life I have worked as a machine learning engineer at various product companies where I was deemed what people now call "cracked" <a href="https://www.getzippin.com/"><i class="bi bi-1-circle"></i></a> <a href="https://kalypso.com/"><i class="bi bi-2-circle"></i></a>.  I'm currently working on creating vertical AI agents for startup founders.
+In past life I have worked as a machine learning engineer at various product companies <a href="https://www.getzippin.com/"><i class="bi bi-1-circle"></i></a> <a href="https://kalypso.com/"><i class="bi bi-2-circle"></i></a> where I was deemed what people now call ["cracked"](https://www.urbandictionary.com/define.php?term=Cracked&page=3). I'm currently working on creating vertical AI agents for startup founders.
 
 ### Socials
 
