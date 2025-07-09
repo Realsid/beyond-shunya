@@ -29,21 +29,18 @@ Let's play.
 ### Self
 I am Sidharth Singh. 
 
-In past life I have worked as a machine learning engineer at various product companies <a href="https://www.getzippin.com/"><i class="bi bi-1-circle"></i></a> <a href="https://kalypso.com/"><i class="bi bi-2-circle"></i></a> where I was deemed what people now call ["cracked"](https://www.urbandictionary.com/define.php?term=Cracked&page=3). I'm currently working on creating vertical AI agents for startup founders.
+In past life I have worked as a machine learning engineer at various product companies <a href="https://www.getzippin.com/"><i class="bi bi-1-circle"></i></a> <a href="https://kalypso.com/"><i class="bi bi-2-circle"></i></a>. I'm currently working on creating vertical AI agents for startup founders.
 
 ### Socials
 
-  <button type="button" class="btn btn-dark" onclick="window.open('https://x.com/yourusername', '_blank')" aria-label="X">
+  <button type="button" class="btn btn-dark" onclick="window.open('https://x.com/sid_on_x', '_blank')" aria-label="X">
     <i class="bi bi-twitter-x"></i>
   </button>
-  <button type="button" class="btn btn-dark" onclick="window.open('https://linkedin.com/in/yourusername', '_blank')" aria-label="LinkedIn">
+  <button type="button" class="btn btn-dark" onclick="window.open('https://linkedin.com/in/sid-on-in', '_blank')" aria-label="LinkedIn">
     <i class="bi bi-linkedin"></i>
   </button>
-  <button type="button" class="btn btn-dark" onclick="window.open('https://github.com/yourusername', '_blank')" aria-label="GitHub">
+  <button type="button" class="btn btn-dark" onclick="window.open('https://github.com/realsid', '_blank')" aria-label="GitHub">
     <i class="bi bi-github"></i>
-  </button>
-  <button type="button" class="btn btn-dark" onclick="window.location.href='mailto:your@email.com'" aria-label="Email">
-    <i class="bi bi-envelope"></i>
   </button>
 
 ### Recent
